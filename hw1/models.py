@@ -74,8 +74,9 @@ class MCPerceptron(MCModel):
 
     def fit(self, *, X, y, lr):
         W = self.W
-        for obs in range(len(y)):  # once for each observation
+        for obs in range(X.shape[0]):  # once for each observation
             x = csr_matrix.toarray(X[obs])
+            check = np.dot(x, np.transpose(W))
             yhat = np.argmax(np.dot(x, np.transpose(W)))
             if yhat != y[obs]:
                 W[yhat] = W[yhat] - lr * X[obs]
@@ -91,6 +92,12 @@ class MCPerceptron(MCModel):
             predictions[i] = np.argmax(yhat[i])
         return predictions
 
+    def score(self, X):
+        X = csr_matrix.toarray(self._fix_test_feats(X))
+        W = self.W
+        yhat = np.matmul(W, np.transpose(X))  # yhat[k, i] gives prob that sample xi is in class k
+        return yhat[1]
+
 
 class MCLogistic(MCModel):
 
@@ -100,22 +107,19 @@ class MCLogistic(MCModel):
 
     def fit(self, *, X, y, lr):
         W = self.W
-        correction = np.INF
-        while correction > 0.01:
-            X = csr_matrix.toarray(X)
-            g = np.dot(X, np.transpose(W))
+        for obs in range(len(y)):  # once for each observation
+            x = csr_matrix.toarray(X[obs])
+            g = np.dot(W, np.transpose(x))
             for k in range(len(W)):
                 p = self.softmax(g)
-                correction = lr * p[0, k] * X
+                correction = p[k] * x
                 if k == y[obs]:
-                    W[k:k+1] += x - correction
+                    W[k:k+1] += lr*(x - correction)
                 else:
-                    W[k:k+1] -= correction
+                    W[k:k+1] -= lr*correction
         self.W = W
 
-
     def predict(self, X):
-        X = self._fix_test_feats(X)
         X = csr_matrix.toarray(self._fix_test_feats(X))
         W = np.transpose(self.W)
         yhat = np.matmul(X, W)
@@ -124,15 +128,22 @@ class MCLogistic(MCModel):
             predictions[i] = np.argmax(yhat[i])
         return predictions
 
+    def score(self, X):
+        X = csr_matrix.toarray(self._fix_test_feats(X))
+        W = self.W
+        yhat = np.matmul(W, np.transpose(X))  # yhat[k, i] gives prob that sample xi is in class k
+        return yhat[1]
+
     def softmax(self, logits):
         g = logits
         gmax = max(g)
+        softg = np.zeros(len(g))
         tot = 0
         for k in range(len(g)):
             tot += np.exp(g[k]-gmax)
         for k in range(len(g)):
-            g[k] = np.exp(g[k]-gmax)/tot
-        return g
+            softg[k] = np.exp(g[k]-gmax)/tot
+        return softg
 
 
 class OneVsAll(Model):
@@ -144,10 +155,19 @@ class OneVsAll(Model):
         self.models = [model_class(nfeatures=nfeatures, nclasses=2) for _ in range(nclasses)]
 
     def fit(self, *, X, y, lr):
-        # TODO: Implement this!
-        raise Exception("You must implement this method!")
+        for k in range(self.num_classes):
+            labels = np.zeros(X.shape[0], dtype=int)
+            for i in range(X.shape[0]):
+                if y[i] == k:
+                    # if yhat = k, label it 1; else, label it 0
+                    labels[i] = 1
+            self.models[k].fit(X=X, y=labels, lr=lr)
 
     def predict(self, X):
-        X = self._fix_test_feats(X)
-        # TODO: Implement this!
-        raise Exception("You must implement this method!")
+        probs = np.zeros([X.shape[0], self.num_classes])
+        for k in range(self.num_classes):
+            probs[:, k] = self.models[k].score(X)
+        predictions = np.zeros(X.shape[0])
+        for i in range(X.shape[0]):
+            predictions[i] = np.argmax(probs[i, :])
+        return predictions
