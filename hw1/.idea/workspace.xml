@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c633874-8252-433b-8769-0c5b8cef3924" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech.dev.predictions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech.logistic.model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech.perceptron.model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scratch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scratch/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +16,10 @@
     <session id="-2094750689">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,11 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
+            <state relative-caret-position="1740">
               <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
-              <folding>
-                <element signature="e#208#217#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -66,12 +61,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="408">
               <caret line="173" selection-start-line="173" selection-end-line="173" />
               <folding>
                 <element signature="e#115#133#0" expanded="true" />
                 <marker date="1569471190712" expanded="true" signature="3737:3743" ph="..." />
-                <marker date="1569471190712" expanded="true" signature="4135:4282" ph="..." />
               </folding>
             </state>
           </provider>
@@ -80,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compute_accuracy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="195">
               <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -92,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-399">
+            <state relative-caret-position="300">
               <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
             </state>
           </provider>
@@ -113,7 +107,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="90" />
+    <option name="x" value="31" />
     <option name="y" value="23" />
     <option name="width" value="1249" />
     <option name="height" value="759" />
@@ -353,9 +347,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="23" width="1249" height="759" extended-state="0" />
+    <frame x="31" y="23" width="1249" height="759" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2535211" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25766364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -391,13 +385,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/speech.dev.predictions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/speech.dev.predictions" />
     <entry file="file://$PROJECT_DIR$/speech.mc.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-219" />
@@ -410,16 +398,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="1740">
+          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/compute_accuracy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="195">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -427,24 +415,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
-          <folding>
-            <element signature="e#208#217#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="408">
           <caret line="173" selection-start-line="173" selection-end-line="173" />
           <folding>
             <element signature="e#115#133#0" expanded="true" />
             <marker date="1569471190712" expanded="true" signature="3737:3743" ph="..." />
-            <marker date="1569471190712" expanded="true" signature="4135:4282" ph="..." />
           </folding>
         </state>
       </provider>

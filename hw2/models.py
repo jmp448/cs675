@@ -95,8 +95,8 @@ class Node(RegressionTree):
         min_sse = np.inf
         for d in range(X.shape[1]):
             visited = []
-            for i in range(1, X.shape[0]-1):
-                # Need to work backwards to ensure equal or less than values are included properly
+            for i in range(X.shape[0]):
+                # Need to work backwards to ensure equal values are included properly
                 i_adj = X.shape[0]-i-1
                 threshold = X[Xsort[i_adj, d], d]
                 if visited.__contains__(threshold):
@@ -104,7 +104,7 @@ class Node(RegressionTree):
                 else:
                     visited.append(threshold)
                     left_set = Xsort[:i_adj, d]
-                    if len(left_set) == 0 or len(left_set) == X.shape[0]:
+                    if len(left_set) == 0 or len(left_set) == len(y):
                         continue
                     y_left = np.take(y, left_set, axis=0)
                     y_right = np.delete(y, left_set, axis=0)
@@ -127,7 +127,17 @@ class GradientBoostedRegressionTree(object):
         self.max_depth = max_depth
         self.n_estimators = n_estimators
         self.regularization_parameter = regularization_parameter
+        self.trees = []
+
     def fit(self, *, X, y):
+        f = np.full(len(y), np.average(y))
+        for i in range(self.n_estimators):
+            self.trees.append(RegressionTree(nfeatures=self.num_input_features, max_depth=self.max_depth))
+            g = y - f
+            self.trees[i].fit(X=X, y=g)
+            h = self.trees[i].predict(X)
+            f += self.regularization_parameter*h
+
         """ Fit the model.
                 Args:
                 X: A of floats with shape [num_examples, num_features].
@@ -135,8 +145,6 @@ class GradientBoostedRegressionTree(object):
                 max_depth: An int representing the maximum depth of the tree
                 n_estimators: An int representing the number of regression trees to iteratively fit
         """
-        # TODO: Implement this!
-        raise Exception("You must implement this method!")
 
     def predict(self, X):
         """ Predict.
@@ -146,5 +154,7 @@ class GradientBoostedRegressionTree(object):
         Returns:
                 An array of floats with shape [num_examples].
         """
-        # TODO: Implement this!
-        raise Exception("You must implement this method!")
+        y = np.zeros(X.shape[0])
+        for tree in self.trees:
+            y += tree.predict(X)
+        return y

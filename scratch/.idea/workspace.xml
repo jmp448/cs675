@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4f62eb-a378-48c4-99a5-0c46e39b5b43" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../hw1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw2/dev.predictions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/dev.predictions" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/dev.predictions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw2/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw2/regression.tree.model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/regression.tree.model" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/regression.tree.model" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/depth_2_decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/depth_2_decision_tree.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
