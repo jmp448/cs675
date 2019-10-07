@@ -83,5 +83,5 @@ def main():
 
 if __name__ == "__main__":
     # main()
-    a = [1, 0]
-    print(np.var(a))
+    a = np.array([4, 5, 2, 8, 6])
+    print(np.argsort(a, axis=0))

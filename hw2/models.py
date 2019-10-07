@@ -44,15 +44,15 @@ class RegressionTree(object):
 
 
 class Node(RegressionTree):
-    def __init__(self, max_depth, depth, is_leaf=False, left=None, right=None, split_feature=None, threshold=None, label=None):
+    def __init__(self, max_depth, depth):
         self.max_depth = max_depth
         self.depth = depth
-        self.is_leaf = is_leaf
-        self.left = left
-        self.right = right
-        self.split_feature = split_feature
-        self.threshold = threshold
-        self.label = label
+        self.is_leaf = False
+        self.left = None
+        self.right = None
+        self.split_feature = None
+        self.threshold = None
+        self.label = None
 
     def build_regression_tree(self, X, y):
         novar = True
@@ -74,7 +74,11 @@ class Node(RegressionTree):
             self.label = np.average(y)
             return
         else:
-            X_left, y_left, X_right, y_right = self.optimized_split(X, y)
+            left_set = self.optimized_split(X, y)
+            X_left = np.take(X, left_set, axis=0)
+            y_left = np.take(y, left_set, axis=0)
+            X_right = np.delete(X, left_set, axis=0)
+            y_right = np.delete(y, left_set, axis=0)
             self.left = Node(self.max_depth, self.depth + 1)
             self.right = Node(self.max_depth, self.depth + 1)
             self.left.build_regression_tree(X_left, y_left)
@@ -83,37 +87,38 @@ class Node(RegressionTree):
     def optimized_split(self, X, y):
 
         # Perform sorting for speedup down the road
-        # Xsort = np.zeros(X.shape)
-        # for d in range(X.shape[1]):
-        #     xsort = np.sort(X[:, d])
-        #     for i in range(X.shape[0]):
-        #         Xsort[i, d] = X[:, d].index(xsort[i])
+        Xsort = np.zeros(X.shape, dtype=int)
+        for d in range(X.shape[1]):
+            Xsort[:, d] = np.argsort(X[:, d])
 
         # Calculate SSEs
         min_sse = np.inf
         for d in range(X.shape[1]):
-            for thresh in X[:, d]:
-                left_set = []
-                for i in range(X.shape[0]):
-                    if X[i, d] <= thresh:
-                        left_set.append(i)
-                if len(left_set) == 0 or len(left_set) == X.shape[0]:
+            visited = []
+            for i in range(1, X.shape[0]-1):
+                # Need to work backwards to ensure equal or less than values are included properly
+                i_adj = X.shape[0]-i-1
+                threshold = X[Xsort[i_adj, d], d]
+                if visited.__contains__(threshold):
                     continue
                 else:
-                    y_left = np.take(y, left_set, 0)
-                    y_right = np.delete(y, left_set, 0)
+                    visited.append(threshold)
+                    left_set = Xsort[:i_adj, d]
+                    if len(left_set) == 0 or len(left_set) == X.shape[0]:
+                        continue
+                    y_left = np.take(y, left_set, axis=0)
+                    y_right = np.delete(y, left_set, axis=0)
                     sse = sum((y_left-np.full(len(y_left), np.average(y_left))) ** 2) +\
                         sum((y_right - np.full(len(y_right), np.average(y_right))) ** 2)
                     if sse < min_sse:
                         min_sse = sse
                         self.split_feature = d
-                        self.threshold = thresh
-                        X_left_min = np.delete(X, right_set, 0)
-                        X_right_min = np.delete(X, left_set, 0)
-                        y_left_min = y_left
-                        y_right_min = y_right
+                        self.threshold = threshold
+                        threshold_index_max = i_adj
 
-        return X_left_min, y_left_min, X_right_min, y_right_min
+        left_set = Xsort[:threshold_index_max, self.split_feature]
+
+        return left_set
 
 
 class GradientBoostedRegressionTree(object):

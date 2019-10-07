@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4f62eb-a378-48c4-99a5-0c46e39b5b43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/depth_2_decision_tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/dev.predictions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/regression.tree.model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depth_2_decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/depth_2_decision_tree.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +20,9 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,13 +38,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="25" />
-          <entry key="py" value="3112" />
+          <entry key="py" value="3191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Python" value="3112" />
+          <entry key="Python" value="3191" />
         </counts>
       </usages-collector>
     </session>
@@ -49,12 +54,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/depth_2_decision_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="28" column="57" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="57" />
+            <state relative-caret-position="1290">
+              <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
               <folding>
-                <marker date="1570199272501" expanded="true" signature="32:232" ph="..." />
-                <marker date="1570199272501" expanded="true" signature="268:273" ph="..." />
-                <marker date="1570199272501" expanded="true" signature="1018:1733" ph="..." />
+                <marker date="1570219762438" expanded="true" signature="32:232" ph="..." />
+                <marker date="1570219762438" expanded="true" signature="268:273" ph="..." />
+                <marker date="1570219762438" expanded="true" signature="1018:1733" ph="..." />
               </folding>
             </state>
           </provider>
@@ -80,9 +85,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="125" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="181" />
+    <option name="y" value="71" />
     <option name="width" value="1002" />
     <option name="height" value="777" />
   </component>
@@ -158,15 +163,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="125" y="23" width="1002" height="777" extended-state="0" />
+    <frame x="181" y="71" width="1002" height="777" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19166666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19583334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28613138" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28613138" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -188,12 +193,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/depth_2_decision_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="28" column="57" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="57" />
+        <state relative-caret-position="1290">
+          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
           <folding>
-            <marker date="1570199272501" expanded="true" signature="32:232" ph="..." />
-            <marker date="1570199272501" expanded="true" signature="268:273" ph="..." />
-            <marker date="1570199272501" expanded="true" signature="1018:1733" ph="..." />
+            <marker date="1570219762438" expanded="true" signature="32:232" ph="..." />
+            <marker date="1570219762438" expanded="true" signature="268:273" ph="..." />
+            <marker date="1570219762438" expanded="true" signature="1018:1733" ph="..." />
           </folding>
         </state>
       </provider>
