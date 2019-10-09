@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4f62eb-a378-48c4-99a5-0c46e39b5b43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../hw1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw2/dev.predictions" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/dev.predictions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/Regression-Experiments.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/Regression-Experiments.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/dev.predictions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/gbrt.dev.predictions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/gbrt.model" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/gbrt.model" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw2/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw2/regression.tree.model" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/regression.tree.model" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -19,7 +21,7 @@
     <session id="-1753579894">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="4" />
@@ -85,9 +87,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="181" />
-    <option name="y" value="71" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="70" />
+    <option name="y" value="47" />
     <option name="width" value="1002" />
     <option name="height" value="777" />
   </component>
@@ -163,15 +165,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="181" y="71" width="1002" height="777" extended-state="1" />
-    <editor active="true" />
+    <frame x="70" y="47" width="1002" height="777" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19583334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28613138" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28613138" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
